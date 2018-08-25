@@ -1,0 +1,29 @@
+{
+  "name": "parcel-bplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --public-url ./ --no-cache"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-fetch": "^0.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.2",
+    "pug-lint": "^2.5.0",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "pug": "^2.0.3"
+  }
+}

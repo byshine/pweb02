@@ -1,0 +1,31 @@
+html  
+    box-sizing: border-box
+
+*, ::before, ::after 
+    box-sizing: inherit
+
+html, body, h1, h2, h3, h4, h5, ul, li, p 
+    margin: 0 
+    padding: 0
+
+ul 
+    list-style-type: none
+  
+  
+$font-stack: Roboto, sans-serif
+$primary-color: #333
+
+body 
+  font: 100% $font-stack
+  color: $primary-color
+
+
+
+.flex-test
+    background-color: black
+    height: 400px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    font-size: 3em
