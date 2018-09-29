@@ -8,20 +8,7 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i", rel="stylesheet")
         link(href="sass/styles.sass" rel="stylesheet") 
     body
-        #app {{ message }}
-
-        #app2
-            span(v-bind:title="message") Testing
-
-        #app3
-            span(v-if="seen") Now you see me
-
-        #app-5
-            p {{ message }}
-            button(v-on:click="reverseMessage") Reverse Message
-
-        #app-7
-            ol
-                todo-item(v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id")
+        
+        #app
 
         script(src="js/entry.js")
