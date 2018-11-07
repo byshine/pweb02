@@ -18,13 +18,18 @@
     "eslint-plugin-fetch": "^0.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "gsap": "^2.0.2",
+    "lodash": "^4.17.11",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.2",
     "pug-lint": "^2.5.0",
+    "reset-css": "^4.0.1",
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.0",
     "vue-router": "^3.0.1",
+    "vue-touch": "^2.0.0-beta.4",
+    "vuex": "^3.0.1",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {

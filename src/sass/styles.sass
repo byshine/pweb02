@@ -1,5 +1,6 @@
 html  
     box-sizing: border-box
+    height: 100%
 
 *, ::before, ::after 
     box-sizing: inherit
@@ -11,21 +12,21 @@ html, body, h1, h2, h3, h4, h5, ul, li, p
 ul 
     list-style-type: none
   
-  
-$font-stack: Roboto, sans-serif
-$primary-color: #333
 
 body 
-  font: 100% $font-stack
-  color: $primary-color
+    height: 100%
+    overflow-x: hidden
+    font-family: 'Playfair Display', serif
+
+
+html
+    --darkslategray: #333333
+
+.hide
+    display: none !important
+
+.content-section
+    padding: 60px
 
 
 
-.flex-test
-    background-color: black
-    height: 400px
-    display: flex
-    justify-content: center
-    align-items: center
-    color: white
-    font-size: 3em

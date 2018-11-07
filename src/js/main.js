@@ -1,30 +1,46 @@
 import Vue from 'vue/dist/vue';
-import VueRouter from 'vue-router';
+import Vuex from 'vuex';
 import App from '../components/App.vue';
-import A from '../components/A.vue';
-import B from '../components/B.vue';
-Vue.use(VueRouter);
+import VueTouch from 'vue-touch';
+
+Vue.use(Vuex);
+Vue.use(VueTouch);
 
 Vue.config.productionTip = false;
 
-const routes = [
-  { path: '/a', component: A },
-  { path: '/b', component: B }
-];  
+const store = new Vuex.Store({
+  state: {
+    isSidebarOpen: false,
+    currentScroll: 1,
+    scrollComponents: ['Main', 'SectionAMN', 'Contact']
+  },
 
-const router = new VueRouter({
-  mode: 'history',
-  routes,
-  scrollBehavior (to, from, savedPosition) {
-    console.log(to);
-    console.log(from)
-    return { x: 0, y: 1000 }
+  mutations: {
+    toggleSideBar(state) {
+      state.isSidebarOpen = !state.isSidebarOpen;
+    },
+    moveDown(state) {
+      if ( state.currentScroll < store.state.scrollComponents.length) {
+        state.currentScroll += 1;
+      }
+    },
+    moveUp(state) {
+      if ( state.currentScroll > 1) {
+        state.currentScroll -= 1;
+      }
+    },
+    moveTo(state, payload) {
+      if ( (payload.currentScroll >= 1) && (payload.currentScroll <= store.state.scrollComponents.length)) {
+        state.currentScroll = payload.currentScroll;
+      }
+    }
   }
-});
+}); 
 
 /* eslint-disable no-new */
 new Vue({
+  el: '#app',
+  store,
   template: '<App/>',
-  components: { App },
-  router
-}).$mount('#app');
+  components: { App }
+});
